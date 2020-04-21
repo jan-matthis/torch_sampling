@@ -19,10 +19,10 @@ sources = main_source + source_cpu
 extension = CppExtension
 define_macros = []
 
-if torch.cuda.is_available() and CUDA_HOME is not None:
-    extension = CUDAExtension
-    sources += source_cuda
-    define_macros += [("WITH_CUDA", None)]
+#if torch.cuda.is_available() and CUDA_HOME is not None:
+#    extension = CUDAExtension
+#    sources += source_cuda
+#    define_macros += [("WITH_CUDA", None)]
 
 setup(
     name='torch_sampling',
